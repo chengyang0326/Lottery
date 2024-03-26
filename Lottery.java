@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -53,7 +54,7 @@ public class Lottery{
 		
 	//get numbers
 	public static int[] getDrawnNumbers(int k, int n){
-		Random rand = new Random();
+		Random rand = new SecureRandom();
 		int y[] =new int[k];
 		for(int i =0; i<y.length; i++){
 			y[i]= rand.nextInt(n-1)+1;
